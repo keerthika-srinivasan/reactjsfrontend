@@ -22,7 +22,7 @@ const ProductGrid = ({ products }) => {
                     heroImage={product.image1}
                     thumbnail={product.image2}
                     isFree={product.isFree}
-                    price={product.isFree ? 'FREE' : (product.price === undefined ? 'Not Confirmed' : product.price)}
+                    price='500'
                     textColor={product.textColor}
                     title={product.title} />
             ))}
