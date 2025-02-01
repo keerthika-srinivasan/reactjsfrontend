@@ -1,4 +1,4 @@
-const ENDPOINT = process.env.ENDPOINT || 'https://demo4690370.mockable.io'
+const ENDPOINT = process.env.ENDPOINT || 'https://fakestoreapi.com'
 
 async function retrieveProducts() {
     try {
