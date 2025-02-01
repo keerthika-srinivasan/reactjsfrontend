@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { retrieveProduct } from '../../common/APIUtils'
 import Header from '../Header/Header'
+import myImage from './rapdip.jpg'
 
 const ProductDetails = () => {
     const { productId } = useParams()
@@ -54,7 +55,7 @@ const ProductDetails = () => {
             </div>
             <Header text={details.title} />
             <div style={contentStyle}>
-                <img src={details.image1} alt={details.artist} style={imgStyle} />
+                <img src={myImage} alt={details.artist} style={imgStyle} />
                 <div style={detailStyle}>
                     <p>Artist: {details.artist}</p>
                     <p>Description: {details.description}</p>
