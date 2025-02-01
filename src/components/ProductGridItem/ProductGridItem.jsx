@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
+import myImage from './loader.jpg'
 
 const ProductGridItem = ({ id, title, price, thumbnail, backgroundColor, accentColor, textColor }) => {
     const style = {
@@ -30,7 +31,7 @@ const ProductGridItem = ({ id, title, price, thumbnail, backgroundColor, accentC
     return (
         <Link to={`/product/${id}`}>
             <div style={style} >
-                <img src={thumbnail} style={imgStyle} alt={title} />
+                <img src={myImage} style={imgStyle} alt={title} />
                 <p>{title}</p>
                 <p style={priceStyle}>£ {price}</p>
             </div>
