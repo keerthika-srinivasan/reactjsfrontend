@@ -1,8 +1,11 @@
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import myImage from './loader.jpg'
+import { Carousel } from "react-responsive-carousel";
+import React, { useState } from "react";
 
 const ProductGridItem = ({ id, title, price, thumbnail, backgroundColor, accentColor, textColor }) => {
+    const [autoPlay, setAutoPlay] = useState(false);
     const style = {
         borderLeft: `solid 3px ${accentColor}`,
         borderRadius: '5px',
@@ -29,14 +32,30 @@ const ProductGridItem = ({ id, title, price, thumbnail, backgroundColor, accentC
 
 
     return (
-        <Link to={`/product/${id}`}>
-            <div style={style} >
-                <img src={myImage} style={imgStyle} alt={title} />
-                <p>{title}</p>
-                <p style={priceStyle}>£ {price}</p>
-            </div>
-        </Link>
+        
+        
+   
+      
+
+
+        <div style={style} onMouseEnter={() => setAutoPlay(true)} onMouseLeave={() => setAutoPlay(false)} >
+        <Carousel autoPlay={autoPlay} infiniteLoop interval={1000}  showThumbs={false} showStatus={false}>
+      <div>
+         <img src={myImage} style={imgStyle} alt={title} />
+         
+     </div>
+     <div>
+         <img src={myImage} style={imgStyle} alt={title} />
+         
+     </div>
+      
+        </Carousel>
+        <div><Link to={`/product/${id}`}><p>{title}</p>
+        <p style={priceStyle}>£ {price}</p></Link></div>
+ </div>
+       
     )
+
 }
 
 ProductGridItem.propTypes = {
