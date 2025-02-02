@@ -29,7 +29,7 @@ const ProductCarousel = ({ products }) => {
                     {
                         products.sort((a, b) => a.feature_order - b.feature_order).map(product => (
                             <Link to={`/product/${product.id}`} key={product.id}>
-                                <img src={product.image1} alt={product.description} style={imgStyle(product.backgroundColor)} />
+                                <img src='https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Grand-i10-Nios/Highlights/Grandi10niosnew/niosmodelpc.png' alt={product.description} style={imgStyle(product.backgroundColor)} />
                                 <p className='legend'>{product.title}</p>
                             </Link>
                         ))
