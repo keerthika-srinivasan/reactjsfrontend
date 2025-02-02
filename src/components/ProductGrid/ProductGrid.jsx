@@ -4,7 +4,7 @@ import ProductGridItem from '../ProductGridItem/ProductGridItem'
 const ProductGrid = ({ products }) => {
     const style = {
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
+        gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
         rowGap: '20px',
         columnGap: '20px',
     }
